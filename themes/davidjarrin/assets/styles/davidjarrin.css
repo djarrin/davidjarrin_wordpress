@@ -1,0 +1,18 @@
+/* Primary SCSS file for the theme */
+nav {
+  box-shadow: 0 10px 15px #6C6C6C !important;
+  margin-bottom: 0; }
+  nav ul#menu-primary li {
+    display: inline-block; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Vollkorn', serif; }
+
+p {
+  font-family: 'Libre Baskerville', serif; }
+
+#header_photo {
+  margin: 0 0 40px 0;
+  box-shadow: 0px 10px 15px #6C6C6C; }
+  #header_photo img {
+    width: 100%; }
