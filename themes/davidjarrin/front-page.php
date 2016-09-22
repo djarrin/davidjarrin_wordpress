@@ -30,7 +30,7 @@ $most_recent_posts = query_posts($args);
 
 $output .= '<h2>My Most Recent Insight</h2>';
 
-$output .= '<h4>'. get_the_title() .'</h4>';
+$output .= '<h4><a href="'. get_the_permalink().'">'. get_the_title() .'</a></h4>';
 
 $featuredImage = get_the_post_thumbnail(null, 'medium', array('class' => 'posts_front_page_image'));
 if(!is_null($featuredImage) AND !empty($featuredImage)) {
@@ -59,7 +59,7 @@ $projects_query = new WP_Query( $projects_args );
 if ( $projects_query->have_posts() ) {
     while ( $projects_query->have_posts() ) {
         $projects_query->the_post();
-        $output .= '<h4>'. get_the_title() .'</h4>';
+        $output .= '<h4><a href="'. get_the_permalink().'">'. get_the_title() .'</a></h4>';
 
         $featuredProjectsImage = get_the_post_thumbnail(null, 'large', array('class' => 'projects_front_page_image'));
         if(!is_null($featuredProjectsImage) AND !empty($featuredProjectsImage)) {
