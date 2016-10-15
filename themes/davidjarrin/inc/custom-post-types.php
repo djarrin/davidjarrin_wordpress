@@ -9,6 +9,7 @@ function projects_init() {
         'hierarchical' => false,
         'rewrite' => array('slug' => 'projects'),
         'query_var' => true,
+        'publicly_queryable' => true,
         'menu_icon' => 'dashicons-hammer',
         'taxonomies'  => array( 'projects_categories' ),
         'supports' => array(

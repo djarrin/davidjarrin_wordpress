@@ -52,3 +52,6 @@ require_once 'inc/helper-functions.php';
 
 //registering all custom post types
 require_once 'inc/custom-post-types.php';
+
+//any ajax actions will be contained in this file
+require_once 'inc/ajax-loaders.php';

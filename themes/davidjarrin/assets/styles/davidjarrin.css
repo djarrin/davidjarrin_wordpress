@@ -11,8 +11,76 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-family: 'Libre Baskerville', serif; }
 
+div.row.top_row {
+  margin-top: 80px; }
+
+div.row.top_row.front_page {
+  margin-top: 50px; }
+
 #header_photo {
   margin: 0 0 40px 0;
   box-shadow: 0px 10px 15px #6C6C6C; }
   #header_photo img {
     width: 100%; }
+
+div.project_category_container {
+  border: 2px solid grey;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #d9d9d9;
+  opacity: 0.9;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  margin-bottom: 50px; }
+  div.project_category_container ul.projects_category_list {
+    margin-left: 0;
+    padding-left: 0; }
+    div.project_category_container ul.projects_category_list li.project_container {
+      list-style: none; }
+  div.project_category_container div#more-projects {
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 15px -21px -21px -21px;
+    height: 5%;
+    border-radius: 0 0 15px 15px;
+    padding-top: 10px;
+    transition: opacity 1s; }
+  div.project_category_container div#more-projects:hover {
+    opacity: 0.7;
+    cursor: pointer; }
+  div.project_category_container div#load-more-projects {
+    text-align: center;
+    background-color: white;
+    height: 5%;
+    margin: 15px -20px -20px -21px;
+    padding-top: 10px;
+    font-weight: 700;
+    transition: background-color 1s;
+    display: none; }
+  div.project_category_container div#load-more-projects:hover {
+    background-color: #e6e6e6;
+    cursor: pointer; }
+  div.project_category_container div.loader-container {
+    display: none;
+    position: relative;
+    left: 46%; }
+
+li.hidden_projects {
+  display: none; }
+
+body.page-template-templ_latest_insights ul.insights_list {
+  padding-left: 0;
+  margin-left: 0; }
+  body.page-template-templ_latest_insights ul.insights_list li.insights_container {
+    list-style: none; }
+
+body.page-template-templ_latest_insights div.loader-container {
+  display: none;
+  position: relative;
+  left: 46%;
+  margin-bottom: 15px; }
+
+body.page-template-templ_latest_insights li.insights_container.loaded {
+  display: none; }

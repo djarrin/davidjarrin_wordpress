@@ -4,7 +4,7 @@ wp_head();
 get_header();
 $output = '';
 
-$output .= '<div class="row">';
+$output .= '<div class="row top_row front_page">';
 $output .= '<div class="col-lg-12" id="header_photo">';
 $output .= '<img src="'. get_template_directory_uri() .'/assets/imgs/dmjarrin_1200x500_wtype.jpg" alt="front page photo"/>';
 $output .= '</div>'; //header_photo

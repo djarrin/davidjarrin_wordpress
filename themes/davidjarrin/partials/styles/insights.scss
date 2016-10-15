@@ -1,0 +1,21 @@
+body.page-template-templ_latest_insights {
+  ul.insights_list {
+    padding-left: 0;
+    margin-left: 0;
+
+    li.insights_container {
+      list-style: none;
+    }
+  }
+
+  div.loader-container {
+    display: none;
+    position: relative;
+    left: 46%;
+    margin-bottom: 15px;
+  }
+
+  li.insights_container.loaded {
+    display: none;
+  }
+}
