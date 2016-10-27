@@ -1,8 +1,19 @@
 #header_photo {
-  margin: 0 0 40px 0;
+  margin: 0;
   box-shadow: 0px 10px 15px #6C6C6C;
 
   img {
     width: 100%;
+  }
+}
+div.row.top_row.front_page {
+  margin-top: -25px;
+}
+
+div.fp_post_container {
+  padding: 10px;
+
+  p.more_content {
+    margin-top: 40px;
   }
 }

@@ -101,6 +101,7 @@ function insightsLoader()
             $output .= '<p>'. get_the_excerpt() .' <a href="'. get_the_permalink() .'">Read the rest of the post...</a></p>';
 
             $output .= '</li>'; //insights_container
+            $output .= '<hr />';
         }
     } else {
         $output .= '<div class="no-posts">Sorry, no more insights</div>';

@@ -106,6 +106,17 @@ class BuildForm
         $output .= '<img src="'. plugins_url('../img/pig.jpg', __FILE__) .'" class="captcha_photo" key_value="458848">';
         $output .= '<img src="'. plugins_url('../img/steve-jobs.jpg', __FILE__) .'" class="captcha_photo" key_value="561943">';
         $output .= '</div>';
+        $output .= '<div id="rightAnswerShow">';
+        $output .= '<p>That\'s right! Your email has been sent.</p>';
+        $output .= '</div>'; //rightAnswerShow
+        $output .= '<div id="wrongAnswer">';
+        $output .= '<p>Nope! You need to study up on my idols...... And favorite animal. Please try again after the page refreshes.</p>';
+        $output .= '</div>'; //wrongAnswer
+        $output .= '<div id="contactError">';
+        $output .= '<p>Oooops! Something went wrong, try again later or contact me on <a href="https://www.linkedin.com/in/david-jarrin-612677a2" target="_blank">my Linkedin</a></p>';
+        $output .= '</div>'; //contactError
+        $output .= '<i class="fa fa-refresh fa-spin fa-5x" aria-hidden="true"></i>';
+        $output .= '<div id="captcha_overlay"></div>';
         $output .= '</div>';
 
 

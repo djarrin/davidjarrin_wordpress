@@ -5,6 +5,8 @@ body.page-template-templ_latest_insights {
 
     li.insights_container {
       list-style: none;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
   }
 
@@ -17,5 +19,8 @@ body.page-template-templ_latest_insights {
 
   li.insights_container.loaded {
     display: none;
+  }
+  div.main_content {
+    margin-top: -10px;
   }
 }

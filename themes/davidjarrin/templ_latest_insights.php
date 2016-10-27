@@ -6,7 +6,7 @@ get_header();
 
 $output = '';
 $output .= '<div class="row top_row">';
-$output .= '<div class="col-xs-10 col-md-6 col-xs-offset-1 col-md-offset-3" id="latest-insights">';
+$output .= '<div class="col-xs-10 col-md-6 col-xs-offset-1 col-md-offset-3 main_content" id="latest-insights">';
 
 $output .= '<h1>My Most Recent Insight</h1>';
 $output .= '<ul class="insights_list">';
@@ -34,6 +34,7 @@ if ( $query->have_posts() ) {
         $output .= '<p>'. get_the_excerpt() .' <a href="'. get_the_permalink() .'">Read the rest of the post...</a></p>';
 
         $output .= '</li>'; //insights_container
+        $output .= '<hr />';
     }
 } else {
     $output .= '<p>No posts yet but I\'m working on that</p>';

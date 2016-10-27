@@ -3,7 +3,7 @@ wp_head();
 get_header();
 ?>
     <div class="row top_row">
-        <div class="col-xs-10 col-md-6 col-xs-offset-1 col-md-offset-3" id="single_projects">
+        <div class="col-xs-10 col-md-6 col-xs-offset-1 col-md-offset-3" id="contact_me">
             <?php
 
             if ( have_posts() ) : while ( have_posts() ) : the_post();

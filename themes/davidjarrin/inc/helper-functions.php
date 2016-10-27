@@ -59,7 +59,7 @@ function displayPortfolioPosts($post_object, $first_call, $containerNumber)
             $post_object->the_post();
             if($first_call AND $post_object->current_post == 0) {
                 $output .= '<li class="project_container feature_post">';
-                $output .= '<h3><a href="'. get_the_permalink().'">'. get_the_title() .'</a></h3>';
+                $output .= '<h4><a href="'. get_the_permalink().'">'. get_the_title() .'</a></h4>';
                 $featuredImage = get_the_post_thumbnail(null, 'medium', array('class' => 'posts_front_page_image'));
                 if(!is_null($featuredImage) AND !empty($featuredImage)) {
                     $output .= $featuredImage;
@@ -75,7 +75,10 @@ function displayPortfolioPosts($post_object, $first_call, $containerNumber)
                     $output .= $featuredImage;
                 }
                 $output .= '<p>' . get_the_excerpt() . ' <a href="' . get_the_permalink() . '">Read the rest of the post...</a></p>';
+                $output .= '<hr />';
                 $output .= '</li>'; //hidden_projects
+
+
             }
         }
         $output .= '</ul>'; //projects_category_list

@@ -30,6 +30,10 @@ class wpContactForm
 
         // Register styles
         add_action('wp_enqueue_scripts', array($this, 'contactFormStyles'));
+
+
+        add_action("wp_ajax_processAndSendContactForm", array($this, "processAndSendContactForm" ) );
+        add_action("wp_ajax_nopriv_processAndSendContactForm", array( $this, "processAndSendContactForm" ) );
     }
 
 
@@ -68,6 +72,46 @@ class wpContactForm
         }
     }
 
+    public function processAndSendContactForm()
+    {
+        if(!isset($_POST['choosenValue'])
+            OR empty($_POST['choosenValue'])
+            OR !isset($_POST['key'])
+            OR empty($_POST['key'])
+            OR empty($_POST['name'])
+            OR !isset($_POST['name'])
+            OR !isset($_POST['email'])
+            OR empty($_POST['email'])
+            OR !isset($_POST['message'])
+            OR empty($_POST['message'])
+        ) {
+            header("HTTP/1.0 404 Not Found");
+        }
+
+        switch ($_POST['purposeOfContact']) {
+            case 'topic_discussion' :
+                $subject = 'Topic Discussion';
+                break;
+            case 'free_lance_job' :
+                $subject = 'Free Lance Position Available';
+                break;
+            case 'full_time_position' :
+                $subject = 'Full Time Position';
+                break;
+            default :
+                $subject = 'No Subject Email From davidjarrin.com';
+        }
+        if($_POST['key'] === $_POST['choosenValue']) {
+            $headers[] = 'From: '. $_POST['name'] .' <'. $_POST['email'] .'>';
+            wp_mail('dmjarrin@gmail.com', $subject, $_POST['message'], $headers);
+            echo 'TRUE';
+        } else {
+            echo 'FALSE';
+        }
+
+        wp_die();
+    }
+
 
     public function contactFormScripts()
     {
@@ -80,6 +124,9 @@ class wpContactForm
 
 
         wp_enqueue_script('contact-form-js');
+        wp_localize_script( 'contact-form-js', 'contactformaddress', array(
+            'ajaxurl' => admin_url( 'admin-ajax.php' ),
+        ));
     }
 
     public function contactFormStyles()
