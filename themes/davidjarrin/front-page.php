@@ -34,7 +34,7 @@ $output .= '<h4 class="front_page_post_title"><a href="'. get_the_permalink().'"
 
 $featuredImage = get_the_post_thumbnail(null, 'medium', array('class' => 'posts_front_page_image'));
 if(!is_null($featuredImage) AND !empty($featuredImage)) {
-    $output .= $featuredImage;
+    $output .= '<a href="'. get_the_permalink() .'">' . $featuredImage .'</a>';
 }
 $output .= '<p>'. get_the_excerpt() .' <a href="'. get_the_permalink() .'">Read the rest of the post...</a></p>';
 
@@ -65,7 +65,7 @@ if ( $projects_query->have_posts() ) {
 
         $featuredProjectsImage = get_the_post_thumbnail(null, 'large', array('class' => 'projects_front_page_image'));
         if(!is_null($featuredProjectsImage) AND !empty($featuredProjectsImage)) {
-            $output .= $featuredProjectsImage;
+            $output .= '<a href="'. get_the_permalink() .'">' . $featuredProjectsImage . '</a>';
         }
 
         $output .= '<p>'. get_the_excerpt() .' <a href="'. get_the_permalink() .'">Read the rest of the post...</a></p>';

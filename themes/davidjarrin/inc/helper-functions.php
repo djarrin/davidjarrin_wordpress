@@ -62,7 +62,7 @@ function displayPortfolioPosts($post_object, $first_call, $containerNumber)
                 $output .= '<h4><a href="'. get_the_permalink().'">'. get_the_title() .'</a></h4>';
                 $featuredImage = get_the_post_thumbnail(null, 'medium', array('class' => 'posts_front_page_image'));
                 if(!is_null($featuredImage) AND !empty($featuredImage)) {
-                    $output .= $featuredImage;
+                    $output .= '<a href="'. get_the_permalink() .'">' . $featuredImage .'</a>';
                 }
                 $output .= '<p>'. get_the_excerpt() .' <a href="'. get_the_permalink() .'">Read the rest of the post...</a></p>';
                 $output .= '</li>'; //feature_post
@@ -72,7 +72,7 @@ function displayPortfolioPosts($post_object, $first_call, $containerNumber)
 
                 $featuredImage = get_the_post_thumbnail(null, 'medium', array('class' => 'posts_front_page_image'));
                 if (!is_null($featuredImage) AND !empty($featuredImage)) {
-                    $output .= $featuredImage;
+                    $output .= '<a href="'. get_the_permalink() .'">' . $featuredImage .'</a>';
                 }
                 $output .= '<p>' . get_the_excerpt() . ' <a href="' . get_the_permalink() . '">Read the rest of the post...</a></p>';
                 $output .= '<hr />';

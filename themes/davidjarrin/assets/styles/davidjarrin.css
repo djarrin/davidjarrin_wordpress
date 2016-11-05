@@ -65,7 +65,8 @@ h4 {
   margin: 0;
   box-shadow: 0px 10px 15px #6C6C6C; }
   #header_photo img {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 0; }
 
 div.row.top_row.front_page {
   margin-top: -25px; }
