@@ -73,7 +73,7 @@ function insightsLoader()
 {
 
     if(!empty($_POST['offset']) AND !is_null($_POST['offset'])) {
-        $offset = $_POST['offset'];
+        $offset = intval($_POST['offset']);
     } else {
         $offset = null;
     }
@@ -91,7 +91,7 @@ function insightsLoader()
     if ( $query->have_posts() ) {
         while ( $query->have_posts() ) {
             $query->the_post();
-            $output = '<li class="insights_container loaded">';
+            $output .= '<li class="insights_container loaded">';
             $output .= '<h4><a href="'. get_the_permalink().'">'. get_the_title() .'</a></h4>';
 
             $featuredImage = get_the_post_thumbnail(null, 'medium', array('class' => 'posts_front_page_image'));
