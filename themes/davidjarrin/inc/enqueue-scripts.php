@@ -5,7 +5,7 @@ function register_js()
     wp_register_script('bootstrap.min.js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'),'',true);
     //portfolio page js
     wp_register_script('portfolio-js', get_template_directory_uri() . '/partials/js/portfolio.js', array('jquery'),'',true);
-    wp_register_script('insights-js', get_template_directory_uri() . '/partials/js/insights.js', array('jquery'),'',true);
+    wp_register_script('insights-js', get_template_directory_uri() . '/partials/js/insights.js', array('jquery'),'1.0.1',true);
 
     if(is_page('portfolio')) {
         wp_enqueue_script('portfolio-js');

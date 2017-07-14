@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
             type: 'post',
             data: {
                 action: 'insightsLoader',
-                offset: offset
+                offset: offset + 1
             },
             success: function ( data ) {
                 $('ul.insights_list').append( data );
